@@ -27,7 +27,6 @@ html {
 }
 
 body {
-  max-width: 1800px;
   flex-direction: column;
   overflow: scroll;
   background: black;
@@ -357,7 +356,7 @@ footer svg {
   }
 
   body section {
-    padding: 2em 0 2em 2em;
+    padding: 2em;
   }
 
   details,
