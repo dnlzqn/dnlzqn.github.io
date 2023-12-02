@@ -1,5 +1,3 @@
-"use strict";
-
 var i = 0;
 var j = 0;
 var distance = 0;
