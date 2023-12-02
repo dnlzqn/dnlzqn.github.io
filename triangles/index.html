@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Circles</title>
+    <title>dnlzqn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,18 +14,8 @@
     <script src="script.js"></script>
   </head>
   <body class="fixed">
-    <section class="head">
-      <div>
-        <h1 class="xyz"><strong><span><a href="https://danieluzquiano.xyz">danieluzquiano.xyz</a></span></strong></h1>
-        <p><span>Hooked on generative art and creative coding with p5js. A graphic designer specialized in <a href="../typography">typography</a> and <a href="../interaction">interaction</a>.</span>
-        </p>
-      </div>
-      <div>
-        <p class="twitter"><a href="https://twitter.com/danieluzquiano" aria-label="twitter" target="_blank" rel="noopener"><img src="../img/twitter.svg"></a></p>
-      </div>
-    </section>
     <details id="code">
-        <summary>Triangles <pre class="prettyprint">(code)</pre></summary>
+        <summary>Triangles (code)</summary>
       <div class="hide">
         <pre class="prettyprint">
 let zoff=1000000;
@@ -50,6 +40,7 @@ function draw() {
     let x = a*10000;
     let y = noise(a)/tan(x+zoff)*my;
     let e = (cos(x))*width/20;
+    //circle(cos(((x*e))-my)*e, atan(((y/a))/mm)*e,0.13);
     circle(cos(((e*a))-my)*e, atan(((y/e))/mm)*e,0.13);
 
   }
@@ -83,12 +74,8 @@ function windowResized() {
         </pre>
       </div>
     </details>
-    <nav>
-      <a href="../choreography_6/index.html">←</a>
-      <a href=""></a>
-      <a href="../column/index.html">→</a>
-    </nav>
     <script>
+      document.addEventListener('touchstart', {}); // in iframe
       $('#code').click(function(){
           $('#code div').toggleClass('hide');
           $('body').toggleClass('fixed');
