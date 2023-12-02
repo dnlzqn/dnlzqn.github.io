@@ -44,24 +44,15 @@ h1 {
 h2 {
   margin: 0;
   line-height: 1.1;
-  font-size: 1.5rem;
 }
 
 h3 {
   margin: 0 2em 0.5em 0;
   line-height: 1.1;
-  font-size: 1.5rem;
-  font-weight: 400;
 }
 
 .head div:first-child {
   font-size: 5vw;
-}
-
-article p {
-  margin: 0 0 .8em 0;
-  color: #ffffffb3;
-  font-size: 4vw;
 }
 
 p span,
@@ -122,8 +113,7 @@ nav {
 }
 
 nav a:nth-child(1),
-nav a:nth-child(2),
-nav a:nth-child(3) {
+nav a:nth-child(2) {
   flex-grow: 2;
 }
 
@@ -132,10 +122,6 @@ nav a:nth-child(3) {
 }
 
 nav a:nth-child(2) {
-  text-align: center;
-}
-
-nav a:nth-child(3) {
   text-align: right;
 }
 
@@ -145,6 +131,7 @@ body section {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .head {
@@ -156,6 +143,10 @@ body section {
 
 .coding {
   flex: 2 1 auto;
+}
+
+article {
+  margin: 0 0 1rem 0;
 }
 
 .content img {
@@ -195,7 +186,7 @@ canvas {
 }
 
 details {
-  margin: 0;
+  margin: 10rem 0px;
   flex-grow: 1;
 }
 
@@ -319,7 +310,6 @@ pre.prettyprint, code.prettyprint {
 pre.prettyprint {
   width: 100%;
   white-space: inherit;
-  word-break: break-all;
 }
 
 
@@ -361,9 +351,9 @@ footer svg {
   cursor: pointer;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   body { 
-    font-size: 26px; 
+    font-size: 16px; 
   }
 
   body section {
@@ -380,22 +370,13 @@ footer svg {
     font-size: 0.6rem;
   }
 
-  h2, h3 {
-    font-size: 33px;
-  }
-
-  article p {
-    font-size: 26px;
-  }
-
-
   pre {
     max-width: 600px;
   }
 
   .twitter img {
     width: 25px; 
-    margin: 0em 2em;
+    margin: 1.3em 2em 0 2em;
   }
 
   .line_dec {
@@ -415,22 +396,22 @@ footer svg {
   }
 
   .head div:first-child {
-    font-size: 35px;
+    font-size: 16px;
   }
 
   .xyz {
-    font-size: 35px;
+    font-size: 20px;
   }
 
   .head div:first-child,
   .tit {
-    width: 66%;
+    width: 33%;
     margin-right: 20px;
   }
 
   .head div:nth-child(2),
   article div:nth-child(2) {
-/*    width: 66%;*/
+    width: 66%;
   }
 
   .head div:nth-child(2) {
@@ -448,7 +429,7 @@ footer svg {
   .content {
     display: flex;
     padding: 2em;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
@@ -456,7 +437,7 @@ footer svg {
   }
 
   .content .header_article {
-/*    width: 33%;*/
+    width: 33%;
     margin-right: 20px;
 /*    flex-grow: 1;
     flex-shrink: 1;
@@ -466,7 +447,7 @@ footer svg {
   }
 
   .content .content_article {
-    width: 66%;
+    width: 60%;
     display: flex;
     flex-grow: 2;
     flex-shrink: 1;
@@ -474,11 +455,6 @@ footer svg {
     order: 0;
     flex-direction: column;
   }
-
-  .content .content_article p {
-    width: 90%;
-  }
-
 
   .content_article {
     width: 100%;
@@ -512,12 +488,15 @@ footer svg {
     justify-content: flex-start;
   }
 
+  #dinosaur_video {
+    padding: 0;
+    margin-bottom: 1em;
+  }
+
   .head {
     display: flex;
     flex-flow: row;
     flex-grow: 0;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   .head article p:first-child {
