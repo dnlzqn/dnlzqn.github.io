@@ -45,6 +45,7 @@ function touchStarted() {
 function touchMoved() {
   mX = mouseX;
   mY = mouseY;
+  return false;
 }
 
 function windowResized() {
