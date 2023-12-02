@@ -1,0 +1,1 @@
+t=2e1,r=g=b=0,draw=_=>{ for(createCanvas(w=windowWidth, h=windowHeight), colorMode(HSB,360), r=(360),g=(360),b=(360), background(0), noStroke(),translate(w/2, h/2), scale(150), a=0; a<2.5; a+=4e-4) fill(300/a, 113/a, b+a, 80/a), x=1e10*a, y=noise(a)-sin(x)+t, e=cos(x)%a, f=.5+noise(sin(e)), circle(noise(tan(cos(y)))*e, atan(tan(sin(y)))*f, .014); t+=.03}

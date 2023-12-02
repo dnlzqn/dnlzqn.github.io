@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Amoeba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/p5.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="fixed">
+    <section class="head">
+      <div>
+        <h1 class="xyz"><strong><span><a href="https://danieluzquiano.xyz">danieluzquiano.xyz</a></span></strong></h1>
+        <p><span>Hooked on generative art and creative coding with p5js. A graphic designer specialized in <a href="../typography">typography</a> and <a href="../interaction">interaction</a>.</span>
+        </p>
+      </div>
+      <div>
+        <p class="twitter"><a href="https://twitter.com/danieluzquiano" aria-label="twitter" target="_blank" rel="noopener"><img src="../img/twitter.svg"></a></p>
+      </div>
+    </section>
+    <details id="code">
+        <summary>Amoeba (code)</summary>
+      <div class="hide">
+        <pre class="prettyprint">
+          t=2e1,r=g=b=0,draw=_=>{ for(createCanvas(w=windowWidth, h=windowHeight), colorMode(HSB,360), r=(360),g=(360),b=(360), background(0), noStroke(),translate(w/2, h/2), scale(150), a=0; a<2.5; a+=4e-4) fill(300/a, 113/a, b+a, 80/a), x=1e10*a, y=noise(a)-sin(x)+t, e=cos(x)%a, f=.5+noise(sin(e)), circle(noise(tan(cos(y)))*e, atan(tan(sin(y)))*f, .014); t+=.03}
+        </pre>
+      </div>
+    </details>
+    <nav>
+      <a href="../allien_shell/index.html">←</a>
+      <a id="refresh" href="../amoeba/index.html">Refresh</a>
+      <a href="../choreography_6/index.html">→</a>
+    </nav>
+    <script>
+      $('#code').click(function(){
+          $('#code div').toggleClass('hide');
+          $('body').toggleClass('fixed');
+      });
+    </script>
+  </body>
+</html>

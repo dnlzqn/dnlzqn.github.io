@@ -1,0 +1,534 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html {  
+  flex-direction: column;
+}
+
+body {
+  max-width: 1800px;
+  flex-direction: column;
+  overflow: scroll;
+  background: black;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin: 0
+}
+
+h2 {
+  margin: 0;
+  line-height: 1.1;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0 2em 0.5em 0;
+  line-height: 1.1;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.head div:first-child {
+  font-size: 5vw;
+}
+
+article p {
+  margin: 0 0 .8em 0;
+  color: #ffffffb3;
+  font-size: 4vw;
+}
+
+p span,
+details summary {
+  background-color: #000000ab;
+  display: inline;
+}
+
+p {
+  margin: 0;
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
+
+.xyz {
+  margin-bottom: 0;
+}
+
+.xyz a {
+  text-decoration: none;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.twitter {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.twitter img {
+ width: 4vw; 
+}
+
+.twitter:hover {
+ opacity: 0.5; 
+}
+
+nav {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+nav a:nth-child(1),
+nav a:nth-child(2),
+nav a:nth-child(3) {
+  flex-grow: 2;
+}
+
+.head {
+  width: 100%;
+}
+
+nav a:nth-child(2) {
+  text-align: center;
+}
+
+nav a:nth-child(3) {
+  text-align: right;
+}
+
+body section {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.head {
+  position: relative;
+  flex-flow: column;
+  justify-content: flex-start;
+  flex-grow: 0;
+}
+
+.coding {
+  flex: 2 1 auto;
+}
+
+.content img {
+  width: 100%;
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+canvas {
+  touch-action: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.hide {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+details {
+  margin: 0;
+  flex-grow: 1;
+}
+
+summary {
+  cursor: pointer;
+}
+
+summary:hover {
+  opacity: 0.7;
+}
+
+details>summary {
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+details>summary::before {
+  content: '→ ';
+}
+
+details[open]>summary::before {
+  content: '↓ ';
+}
+
+details[open]>summary {
+  margin-bottom: 0.5rem;
+}
+
+details div {
+  cursor: default;
+  margin: 0 1em;
+}
+
+pre {
+  margin: 0em 0px;
+  background-color: #000000ab;
+  display: inline;
+  line-height: 1;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: normal;
+}
+
+.content .image_article_div {
+  width: 100%;
+}
+
+.twitter-tweet {
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.line_dec {
+  position: absolute;
+  top: 45px;
+  right: 0;
+}
+
+img#botmaleducat {
+  max-width: 500px;
+  margin: 0;
+}
+
+img.line_dec  {
+  width: 30px;
+}
+
+#dinosaur_video {
+  margin: 0 0 0.5em 0;
+}
+
+#intro .fullscreen-bg__video {
+    min-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.fullscreen-bg__video {
+    width: 100%;
+    //min-height: 100%;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+/* Pretty printing styles. Used with prettify.js. */
+/* Vim sunburst theme by David Leibovic */
+
+pre .str, code .str { color: #65B042; } /* string  - green */
+pre .kwd, code .kwd { color: #00ff7a; }
+pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
+pre .typ, code .typ { color: #89bdff; } /* type - light blue */
+pre .lit, code .lit { color: #00d5ff; } 
+pre .pun, code .pun { color: #b0ec8c; } /* punctuation - white */
+pre .pln, code .pln { color: #fff; } /* plaintext - white */
+pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
+pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
+pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
+pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+pre.prettyprint, code.prettyprint {
+  border: none;
+}
+
+pre.prettyprint {
+  width: 100%;
+  white-space: inherit;
+}
+
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  pre .str, code .str { color: #060; }
+  pre .kwd, code .kwd { color: #006; font-weight: bold; }
+  pre .com, code .com { color: #600; font-style: italic; }
+  pre .typ, code .typ { color: #404; font-weight: bold; }
+  pre .lit, code .lit { color: #044; }
+  pre .pun, code .pun { color: #440; }
+  pre .pln, code .pln { color: #000; }
+  pre .tag, code .tag { color: #006; font-weight: bold; }
+  pre .atn, code .atn { color: #404; }
+  pre .atv, code .atv { color: #060; }
+}
+
+footer {
+  width: 100%;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer svg:hover {
+  fill: rgba(255,255,255,0.7);
+}
+
+footer svg {
+  fill: rgba(255,255,255,1);
+  opacity: 1;
+  width: 15px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  body { 
+    font-size: 26px; 
+  }
+
+  body section {
+    padding: 2em 0 2em 2em;
+  }
+
+  details,
+  nav,
+  footer section {
+    padding: 2em;
+  }
+
+  h1 {
+    font-size: 0.6rem;
+  }
+
+  h2, h3 {
+    font-size: 33px;
+  }
+
+  article p {
+    font-size: 26px;
+  }
+
+
+  pre {
+    max-width: 600px;
+  }
+
+  .twitter img {
+    width: 25px; 
+    margin: 0em 2em;
+  }
+
+  .line_dec {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .twitter {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  footer svg {
+    width: 20px;
+  }
+
+  .head div:first-child {
+    font-size: 35px;
+  }
+
+  .xyz {
+    font-size: 35px;
+  }
+
+  .head div:first-child,
+  .tit {
+    width: 66%;
+    margin-right: 20px;
+  }
+
+  .head div:nth-child(2),
+  article div:nth-child(2) {
+/*    width: 66%;*/
+  }
+
+  .head div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+/*  .head div {
+    display: flex;
+    flex-flow: column;
+  }*/
+
+  .content {
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: normal;
+  }
+
+  .content .header_article {
+/*    width: 33%;*/
+    margin-right: 20px;
+/*    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;*/
+    order: 0;
+  }
+
+  .content .content_article {
+    width: 66%;
+    display: flex;
+    flex-grow: 2;
+    flex-shrink: 1;
+    align-items: flex-start;
+    order: 0;
+    flex-direction: column;
+  }
+
+  .content .content_article p {
+    width: 90%;
+  }
+
+
+  .content_article {
+    width: 100%;
+  }
+
+  .content .line_dec {
+    max-width: 80px;
+    width: 33px;
+    margin-left: 2em;
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .content .image_article {
+    display: block;
+    flex-grow: 3;
+    flex-shrink: 3;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .content .image_article_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .head {
+    display: flex;
+    flex-flow: row;
+    flex-grow: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .head article p:first-child {
+    margin-top: 1.3em;
+  }
+
+  .twitter-tweet {
+    width: 100%;
+    padding: 20px 20px 20px 0;
+    margin: 0;
+  }
+
+}
+
+
