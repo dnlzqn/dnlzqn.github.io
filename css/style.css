@@ -17,7 +17,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4vw;
+  font-size: clamp(16px, 4vw, 40px); /* Utiliza los nuevos valores mínimo y máximo */
   color: white;
   font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -351,9 +351,6 @@ footer svg {
 }
 
 @media screen and (min-width: 1000px) {
-  body { 
-    font-size: 16px; 
-  }
 
   body section {
     padding: 2em;
@@ -363,10 +360,6 @@ footer svg {
   nav,
   footer section {
     padding: 2em;
-  }
-
-  h1 {
-    font-size: 0.6rem;
   }
 
   pre {
@@ -392,10 +385,6 @@ footer svg {
 
   footer svg {
     width: 20px;
-  }
-
-  .head div:first-child {
-    font-size: 16px;
   }
 
   .xyz {
