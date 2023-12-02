@@ -20,8 +20,8 @@ function draw() {
     let x = a*10000;
     let y = noise(a)/tan(x+zoff)*my;
     let e = (cos(x))*width/20;
-    circle(cos(((x*e))-my)*e, atan(((y/a))/mm)*e,0.13);
-    //circle(cos(((e*a))-my)*e, atan(((y/e))/mm)*e,0.13);
+    //circle(cos(((x*e))-my)*e, atan(((y/a))/mm)*e,0.13);
+    circle(cos(((e*a))-my)*e, atan(((y/e))/mm)*e,0.13);
 
   }
   zoff += 0.035;
@@ -45,6 +45,7 @@ function touchStarted() {
 function touchMoved() {
   mX = mouseX;
   mY = mouseY;
+  return false;
 }
 
 function windowResized() {
