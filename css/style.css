@@ -87,12 +87,6 @@ a:hover {
   opacity: 0.5;
 }
 
-.twitter {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-}
-
 .twitter img {
  width: 4vw; 
 }
