@@ -352,14 +352,10 @@ footer svg {
 
 @media screen and (min-width: 1000px) {
 
-  body section {
-    padding: 2em;
-  }
-
   details,
   nav,
-  footer section {
-    padding: 2em;
+  section {
+    padding: 1em;
   }
 
   pre {
