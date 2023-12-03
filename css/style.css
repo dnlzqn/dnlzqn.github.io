@@ -367,10 +367,8 @@ footer svg {
     margin: 1.3em 2em 0 2em;
   }
 
-  .line_dec {
-    position: relative;
-    top: auto;
-    right: auto;
+  section p:first-child {
+      max-width: 81%;
   }
 
   .twitter {
@@ -405,11 +403,6 @@ footer svg {
     align-items: flex-start;
   }
 
-/*  .head div {
-    display: flex;
-    flex-flow: column;
-  }*/
-
   .content {
     display: flex;
     padding: 2em;
@@ -423,10 +416,6 @@ footer svg {
   .content .header_article {
     width: 33%;
     margin-right: 20px;
-/*    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;*/
     order: 0;
   }
 
