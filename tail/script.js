@@ -1,32 +1,66 @@
 let zoff = 0;
+let color;
+let mX, mY;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
+  colorMode(HSB, 255, 100, 100, 255);
   frameRate(20);
+  mX = windowWidth*0.4;
 }
 
 function draw() {
   background(0);
-  translate(width * 0.43, height * 0.5);
-  scale(200);
+  translate(width * 0.5, height * 0.385);
+  scale(170*map(mX,0,windowWidth,1.5,0.82));
   noStroke();
-  for (let a = 0; a < 1.15; a += 0.01112) {
-    let e = cos(a) + zoff;
-    fill(100 * a * 2, 5 * a, 250 * a * 2);
-    circle(noise(e), cos(sin(e) * 2), 1.971 / a / 5);
+
+  for (let a = 0; a < map(mX,0,windowWidth,2,5); a += 0.01112) {
+
+    let e = cos(a-zoff) * map(mX,width*0.5,width,1.25,1.75);
+
+    fill(
+      85*a,
+      100/a,
+      250+a)
+
+    ellipse(
+      sin(e), 
+      cos(e)*map(mX,0,width,0.5,1.5), 
+      0.171/a*map(mX,0,width,18,10),
+      0.171/a*map(mX,0,width,18,10)
+    );
+
+    //circle(sin(e), cos(e)*map(mouseX,0,width,0.5,1.5), 0.171/a*map(mouseX,0,width,2,6));
+
   }
 
-  if (
-    mouseX < width * 0.75 &&
-    mouseX > width * 0.35 &&
-    mouseY < height * 0.75 &&
-    mouseY > height * 0.35
-  ) {
-    zoff += 0.08;
-  } else {
-    zoff += 0.03;
-  }
+  zoff += 0.3;
+  
+  //zoff += map(mouseX,0,width,-0.2,+0.2);
+
+}
+
+function mousePressed() {
+  mX = mouseX;
+  mY = mouseY;
+}
+
+function mouseMoved() {
+  mX = mouseX;
+  mY = mouseY;
+}
+
+function touchStarted() {
+  mX = mouseX;
+  mY = mouseY;
+}
+
+function touchMoved() {
+  mX = mouseX;
+  mY = mouseY;
+  return false;
 }
 
 function windowResized() {
