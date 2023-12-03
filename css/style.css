@@ -187,6 +187,7 @@ canvas {
 details {
   margin: 10rem 0px;
   flex-grow: 1;
+  font-size: 0.7em;
 }
 
 summary {
