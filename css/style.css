@@ -87,8 +87,8 @@ a:hover {
   opacity: 0.5;
 }
 
-.twitter img {
- width: 4vw; 
+.twitter {
+ width: 1em; 
 }
 
 .twitter:hover {
@@ -357,19 +357,8 @@ footer svg {
     max-width: 600px;
   }
 
-  .twitter img {
-    width: 25px; 
-    margin: 1.3em 2em 0 2em;
-  }
-
   section p:first-child {
       max-width: 81%;
-  }
-
-  .twitter {
-    position: relative;
-    top: auto;
-    right: auto;
   }
 
   footer svg {
