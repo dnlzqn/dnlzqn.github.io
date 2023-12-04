@@ -18,32 +18,12 @@
         <summary>Tongue_party (code)</summary>
       <div class="hide">
         <pre class="prettyprint">
-          let zoff = 0;
-          function setup() {
-            createCanvas(windowWidth, windowHeight);
-            background(0);
-          }
-          function draw() {
-            background(0);
-            translate(width * 0.5, height * 0.4);
-            scale(200);
-            noStroke();
-            for (let a = 0; a < 3; a += 0.01112) {
-              let e = cos(a-zoff) * map(mouseX,0,width,0.1,2);
-              fill(100*a,15*a,250*a);
-              circle(sin(e), cos(e)*map(mouseX,0,width,0.5,1.15), 0.171/a*map(mouseX,0,width,2,8));
-            }
-            zoff += 0.13;
-          }
         </pre>
       </div>
     </details>
     <script>
-      document.addEventListener('touchstart', {}); // in iframe
-      $('#code').click(function(){
-          $('#code div').toggleClass('hide');
-          $('body').toggleClass('fixed');
-      });
+      var codigo =`let zoff=0;function setup(){createCanvas(windowWidth,windowHeight),background(0)}function draw(){background(0),translate(.5*width,.4*height),scale(200),noStroke();for(let o=0;o<3;o+=.01112){var t=cos(o-zoff)*map(mouseX,0,width,.1,2);fill(100*o,15*o,250*o),circle(sin(t),cos(t)*map(mouseX,0,width,.5,1.15),.171/o*map(mouseX,0,width,2,8))}zoff+=.13}`;
+      executeCode=_=>{eval(codigo)},$("#code div pre").text(codigo),executeCode(),document.addEventListener("touchstart",{}),$("#code").click(function(){$("#code div").toggleClass("hide"),$("body").toggleClass("fixed")});
     </script>
   </body>
 </html>

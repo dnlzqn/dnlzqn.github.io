@@ -18,77 +18,12 @@
         <summary>Column (code)</summary>
       <div class="hide">
         <pre class="prettyprint">
-          let t, s, mx, my;
-let w, h;
-
-function setup() {
-  w = windowWidth;
-  h = windowHeight;
-  createCanvas(w, h);
-  mx = random(w);
-  my = random(h);
-  t = s = 1e5;
-}
-
-function draw() {
-  background(0);
-  fill(w);
-  noStroke();
-  translate(w / 2, h / 2);
-  scale(100);
-
-  let n = map(mx, 0, w, 2.5, -2.5);
-  let m = map(my, 0, h, 2.5, -2.5);
-
-  for (let a = 0; a < 3.5; a += 4e-4) {
-    let x = a * s * n;
-    let y = a % tan(x + s) + m;
-    let e = 1.75 * cos(x * s);
-    let posX = noise(cos(y + t) + m) * e;
-    let posY = tan(sin(y + n + m) + m / s);
-    circle(posX, posY, 0.015);
-  }
-
-  t += 0.03;
-  s += 0.003;
-}
-
-function mousePressed() {
-  mx = mouseX;
-  my = mouseY;
-}
-
-function mouseMoved() {
-  mx = mouseX;
-  my = mouseY;
-}
-
-function touchStarted() {
-  mx = mouseX;
-  my = mouseY;
-}
-
-function touchMoved() {
-  mx = mouseX;
-  my = mouseY;
-  return false;
-}
-
-function windowResized() {
-  w = windowWidth;
-  h = windowHeight;
-  resizeCanvas(w, h);
-}
-
         </pre>
       </div>
     </details>
     <script>
-      document.addEventListener('touchstart', {}); // in iframe
-      $('#code').click(function(){
-          $('#code div').toggleClass('hide');
-          $('body').toggleClass('fixed');
-      });
+      var codigo =`let t,s,mx,my,w,h;function setup(){w=windowWidth,h=windowHeight,createCanvas(w,h),mx=random(w),my=random(h),t=s=1e5}function draw(){background(0),fill(w),noStroke(),translate(w/2,h/2),scale(100);var e=map(mx,0,w,2.5,-2.5),n=map(my,0,h,2.5,-2.5);for(let o=0;o<3.5;o+=4e-4){var m=o*s*e,i=o%tan(m+s)+n,m=1.75*cos(m*s),m=noise(cos(i+t)+n)*m,i=tan(sin(i+e+n)+n/s);circle(m,i,.015)}t+=.03,s+=.003}function mousePressed(){mx=mouseX,my=mouseY}function mouseMoved(){mx=mouseX,my=mouseY}function touchStarted(){mx=mouseX,my=mouseY}function touchMoved(){return mx=mouseX,my=mouseY,!1}function windowResized(){w=windowWidth,h=windowHeight,resizeCanvas(w,h)}`;
+      executeCode=_=>{eval(codigo)},$("#code div pre").text(codigo),executeCode(),document.addEventListener("touchstart",{}),$("#code").click(function(){$("#code div").toggleClass("hide"),$("body").toggleClass("fixed")});
     </script>
   </body>
 </html>

@@ -29,6 +29,29 @@ body {
   align-items: flex-start;
 }
 
+#content-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; 
+  z-index:1;
+  overflow: hidden;
+}
+
+#dynamic-nav {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:2;
+}
+
+#dynamic-nav button {
+  margin: 0 5px;
+}
+      
 h1 {
   font-size: 1.5rem;
   line-height: 1.1;
@@ -305,6 +328,7 @@ pre.prettyprint, code.prettyprint {
 pre.prettyprint {
   width: 100%;
   white-space: inherit;
+  word-break: break-all;
 }
 
 
