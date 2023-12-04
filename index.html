@@ -21,29 +21,24 @@
       <a href="javascript:void(0);" onclick="navigate('next')"><span>→</span></a>
     </nav>
     <script>
-      var folders = ['weird_1','weird_2','allien_shell','column','2_triangles','tail','noise_mesh','loop_5','choreography_6'];
-      var currentIndex = 0;
+      const folders = ['weird_1', 'weird_2', 'allien_shell', 'column', '2_triangles', 'tail', 'noise_mesh', 'loop_5', 'choreography_6'];
+      let currentIndex = 0;
 
-      function loadPage(index) {
-        var folder = folders[index];
-        var pageUrl = folder + "/index.html";
+      const loadPage = (index) => {
+        const folder = folders[index];
+        const pageUrl = `${folder}/index.html`;
         document.getElementById("content-frame").src = pageUrl;
         currentIndex = index;
-      }
+      };
 
-      function navigate(direction) {
-        if (direction === 'prev') {
-          currentIndex = (currentIndex - 1 + folders.length) % folders.length;
-        } else if (direction === 'next') {
-          currentIndex = (currentIndex + 1) % folders.length;
-        }
-
+      const navigate = (direction) => {
+        currentIndex = direction === 'prev' ? (currentIndex - 1 + folders.length) % folders.length : (currentIndex + 1) % folders.length;
         loadPage(currentIndex);
-      }
+      };
 
-      function generateNavigationLinks() {
-        loadPage(currentIndex); 
-      }
+      const generateNavigationLinks = () => {
+        loadPage(currentIndex);
+      };
 
       generateNavigationLinks();
     </script>
