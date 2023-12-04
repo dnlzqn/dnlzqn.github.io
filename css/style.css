@@ -22,12 +22,7 @@ html, body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-html {  
-  flex-direction: column;
-}
-
 body {
-  flex-direction: column;
   overflow: scroll;
   background: black;
   justify-content: flex-start;
@@ -181,6 +176,7 @@ canvas {
 
 .fixed {
   position: fixed;
+  overflow: hidden;
 }
 
 details {
