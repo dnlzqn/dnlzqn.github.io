@@ -17,21 +17,24 @@
         </div>
     </details>
     <script>
-        var codigo = `t=1e4,z=r=g=b=0,s=125;function setup(){createCanvas(windowWidth,windowHeight);colorMode(HSB,360);noiseSeed(random()*999999);randomSeed(random()*999999);r=random(360);g=random(360);b=random(360)}function draw(){background(0);translate(width/2,height/2);scale(s);noStroke();let n=map(mouseX,0,width,0,3),m=map(mouseY,0,height,0,15);for(let a=0;a<5;a+=4e-4){let x=1e4*a,y=cos(a)/sin(t/x),e=cos(x)%a,f=2.5*noise(tan(e));fill(a+r+b,g*a,360);circle(sin(tan(cos(y))+n)*f*e,sin(tan(sin(y))+z+m)*f,.015)}t+=.03,z+=.003}function touchStarted(){return!1}function touchMoved(){return!1}function touchEnded(){return!1}`;
-        
-        executeCode = _ => {
-            eval(codigo);
-        };
-        
-        $("#code div pre").text(codigo);
-        executeCode();
-        
-        document.addEventListener("touchstart", {});
-        
-        $("#code").click(function () {
-            $("#code div").toggleClass("hide");
-            $("body").toggleClass("fixed");
-        });
+var codeSnippet = `
+  g=10,o=0;setup=_=>{createCanvas(W=windowWidth,H=windowHeight);noStroke()};
+  draw=_=>{o+=.02;for(i=0;i<W;i+=g)for(j=0;j<H;j+=g){
+  d=dist(W/2,H/2,i+g/2,j+g/2),a=map(d,0,W/2,0,PI),
+  s=abs(sin(cos(a)*(map(mouseX,0,W,1,55))+o/d+o/.2));
+  fill(.5<s?0:W),rect(i,j,g)}}
+`;
+
+var executeCode = new Function(codeSnippet);
+
+document.addEventListener('touchstart', {}); // en iframe
+$('#code').click(function(){
+  $('#code div').toggleClass('hide');
+  $('body').toggleClass('fixed');
+  $('#code div pre').text(codeSnippet); // Mostrar el código en la etiqueta pre
+  executeCode(); // Ejecutar el código al hacer clic
+});
+
     </script>
 </body>
 </html>
