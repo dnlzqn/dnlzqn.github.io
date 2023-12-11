@@ -23,10 +23,11 @@
     </details>
     <script>
        let zoff=1e6,mX,mY;function setup(){createCanvas(windowWidth,windowHeight),mX=windowWidth/2,mY=windowHeight/2;}function draw(){background(0),translate(width/2,height/2),scale(5);var o=map(mX,0,width,-1,1),t=map(mY,0,height,-100,0);for(let e=0;e<2.5;e+=4e-4){stroke(255),strokeWeight(.151);var i=1e4*e,n=noise(e)/tan(i+zoff)*t,i=cos(i)*width/20;circle(cos(i*e-t)*i,atan(n/i/o)*i,.13)}zoff+=.035;}function mousePressed(){mX=mouseX,mY=mouseY;}function mouseMoved(){mX=mouseX,mY=mouseY;}function touchStarted(){mX=mouseX,mY=mouseY;}function touchMoved(){return mX=mouseX,mY=mouseY,!1;}function windowResized(){resizeCanvas(windowWidth,windowHeight);}
-    $("#code").click(function() {
-      $("details div").toggleClass("hide");
-      $("body").toggleClass("fixed");
-    });
-  </script>
+      document.addEventListener("touchstart",{});
+      $("#code").click(function() {
+        $("details div").toggleClass("hide");
+        $("body").toggleClass("fixed");
+      });
+    </script>
   </body>
 </html>

@@ -23,11 +23,12 @@
     </details>
     <script>
       let zoff=0;function setup(){createCanvas(windowWidth,windowHeight),background(0)}function draw(){background(0),translate(.5*width,.4*height),scale(200),noStroke();for(let o=0;o<3;o+=.01112){var t=cos(o-zoff)*map(mouseX,0,width,.1,2);fill(100*o,15*o,250*o),circle(sin(t),cos(t)*map(mouseX,0,width,.5,1.15),.171/o*map(mouseX,0,width,2,8))}zoff+=.13}
+      document.addEventListener("touchstart",{});
 
       $("#code").click(function() {
         $("details div").toggleClass("hide");
         $("body").toggleClass("fixed");
       });
-  </script>
+    </script>
   </body>
 </html>
