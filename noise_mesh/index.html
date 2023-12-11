@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Allien shell</title>
+    <title>dnlzqn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,16 +13,21 @@
     <script type="text/javascript" src="../js/p5.min.js"></script>
   </head>
   <body class="fixed">
-    <details id="code">
-        <summary>Noise_mesh (code)</summary>
+    <details>
+        <summary id="code">Noise_mesh (code)</summary>
       <div class="hide">
         <pre class="prettyprint">
+          var mX,mY,numX,numY,n,i=0,j=0,distance=0,spacing=70,t=1,w=5e-4;function setup(){createCanvas(windowWidth,windowHeight),colorMode(HSB,width,height,100,100),mX=windowWidth/2,mY=windowHeight/2}function draw(){scale(.5),translate(width/2,height/2),background(0),numX=width/spacing,numY=height/spacing;var e=[],o=[],s=[],m=[];for(i=1;i&lt;numX;i++){for(noFill(),beginShape(),s[i]=spacing*i,j=1;j&lt;numY;j++)m[j]=spacing*j,distance=8e-4*dist(mX*n,mY*n,s[i],m[j]),e[numY*i+j]=80*noise(-1/distance,1/distance),o[numY*i+j]=80*noise(-1/distance,1/distance),strokeWeight(3),stroke(mX*n+j,mY*n*j,200,100),vertex(s[i]+e[numY*i+j]/sin(2*t),m[j]+o[numY*i+j]/cos(2*t));endShape()}for(i=1;i&lt;numY;i++){for(beginShape(),j=1;j&lt;numX;j++)n=2*noise(i*w,j*w,t),stroke(10*j*n,100*i*n,200,100),vertex(s[j]+e[numY*j+i]/sin(2*t),m[i]+o[numY*j+i]/cos(2*t));endShape()}t+=.0013}function mousePressed(){mX=mouseX,mY=mouseY}function mouseMoved(){mX=mouseX,mY=mouseY}function touchStarted(){mX=mouseX,mY=mouseY}function touchMoved(){return mX=mouseX,mY=mouseY,!1}function windowResized(){resizeCanvas(windowWidth,windowHeight)}
         </pre>
       </div>
     </details>
     <script>
-      var codigo =`var mX,mY,numX,numY,n,i=0,j=0,distance=0,spacing=70,t=1,w=5e-4;function setup(){createCanvas(windowWidth,windowHeight),colorMode(HSB,width,height,100,100),mX=windowWidth/2,mY=windowHeight/2}function draw(){scale(.5),translate(width/2,height/2),background(0),numX=width/spacing,numY=height/spacing;var e=[],o=[],s=[],m=[];for(i=1;i<numX;i++){for(noFill(),beginShape(),s[i]=spacing*i,j=1;j<numY;j++)m[j]=spacing*j,distance=8e-4*dist(mX*n,mY*n,s[i],m[j]),e[numY*i+j]=80*noise(-1/distance,1/distance),o[numY*i+j]=80*noise(-1/distance,1/distance),strokeWeight(3),stroke(mX*n+j,mY*n*j,200,100),vertex(s[i]+e[numY*i+j]/sin(2*t),m[j]+o[numY*i+j]/cos(2*t));endShape()}for(i=1;i<numY;i++){for(beginShape(),j=1;j<numX;j++)n=2*noise(i*w,j*w,t),stroke(10*j*n,100*i*n,200,100),vertex(s[j]+e[numY*j+i]/sin(2*t),m[i]+o[numY*j+i]/cos(2*t));endShape()}t+=.0013}function mousePressed(){mX=mouseX,mY=mouseY}function mouseMoved(){mX=mouseX,mY=mouseY}function touchStarted(){mX=mouseX,mY=mouseY}function touchMoved(){return mX=mouseX,mY=mouseY,!1}function windowResized(){resizeCanvas(windowWidth,windowHeight)}`;
-      executeCode=_=>{eval(codigo)},$("#code div pre").text(codigo),executeCode(),document.addEventListener("touchstart",{}),$("#code").click(function(){$("#code div").toggleClass("hide"),$("body").toggleClass("fixed")});
-    </script>
+      var mX,mY,numX,numY,n,i=0,j=0,distance=0,spacing=70,t=1,w=5e-4;function setup(){createCanvas(windowWidth,windowHeight),colorMode(HSB,width,height,100,100),mX=windowWidth/2,mY=windowHeight/2}function draw(){scale(.5),translate(width/2,height/2),background(0),numX=width/spacing,numY=height/spacing;var e=[],o=[],s=[],m=[];for(i=1;i<numX;i++){for(noFill(),beginShape(),s[i]=spacing*i,j=1;j<numY;j++)m[j]=spacing*j,distance=8e-4*dist(mX*n,mY*n,s[i],m[j]),e[numY*i+j]=80*noise(-1/distance,1/distance),o[numY*i+j]=80*noise(-1/distance,1/distance),strokeWeight(3),stroke(mX*n+j,mY*n*j,200,100),vertex(s[i]+e[numY*i+j]/sin(2*t),m[j]+o[numY*i+j]/cos(2*t));endShape()}for(i=1;i<numY;i++){for(beginShape(),j=1;j<numX;j++)n=2*noise(i*w,j*w,t),stroke(10*j*n,100*i*n,200,100),vertex(s[j]+e[numY*j+i]/sin(2*t),m[i]+o[numY*j+i]/cos(2*t));endShape()}t+=.0013}function mousePressed(){mX=mouseX,mY=mouseY}function mouseMoved(){mX=mouseX,mY=mouseY}function touchStarted(){mX=mouseX,mY=mouseY}function touchMoved(){return mX=mouseX,mY=mouseY,!1}function windowResized(){resizeCanvas(windowWidth,windowHeight)}
+
+      $("#code").click(function() {
+        $("details div").toggleClass("hide");
+        $("body").toggleClass("fixed");
+      });
+  </script>
   </body>
 </html>

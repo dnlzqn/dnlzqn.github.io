@@ -13,16 +13,20 @@
     <script type="text/javascript" src="../js/p5.min.js"></script>
   </head>
   <body class="fixed">
-    <details id="code">
-        <summary>Loop No. 5 (code)</summary>
+    <details>
+        <summary id="code">Loop No. 5 (code)</summary>
       <div class="hide">
         <pre class="prettyprint">
+          let s=23,t=1,f=1,mX,mY;function setup(){createCanvas(w=windowWidth,h=windowHeight),mX=.9*width,mY=.9*height,noStroke()}function draw(){scale(2);for(let o=-s;o&lt;w+2*s;o+=s/2)for(let e=-s;e&lt;w+2*s;e+=s/2){var i=1.5*cos(t/5-e*s*30+map(mX,0,width,-5,5))*s/2,m=2.5*sin(t/5-o/30+map(mY,0,height,-5,5))*s/2;(o/(s/2)+e/(s/2))%2==0?fill(255):fill(0),circle(o+m+i,e+m,s)}t+=.12}function mousePressed(){mX=mouseX,mY=mouseY}function mouseMoved(){t+=0,mX=mouseX,mY=mouseY}function touchStarted(){return mX=mouseX,mY=mouseY,!1}function touchMoved(){return mX=mouseX,mY=mouseY,!1}function windowResized(){resizeCanvas(windowWidth,windowHeight)}
         </pre>
       </div>
     </details>
     <script>
-      var codigo =`let s=23,t=1,f=1,mX,mY;function setup(){createCanvas(w=windowWidth,h=windowHeight),mX=.9*width,mY=.9*height,noStroke()}function draw(){scale(2);for(let o=-s;o<w+2*s;o+=s/2)for(let e=-s;e<w+2*s;e+=s/2){var i=1.5*cos(t/5-e*s*30+map(mX,0,width,-5,5))*s/2,m=2.5*sin(t/5-o/30+map(mY,0,height,-5,5))*s/2;(o/(s/2)+e/(s/2))%2==0?fill(255):fill(0),circle(o+m+i,e+m,s)}t+=.12}function mousePressed(){mX=mouseX,mY=mouseY}function mouseMoved(){t+=0,mX=mouseX,mY=mouseY}function touchStarted(){return mX=mouseX,mY=mouseY,!1}function touchMoved(){return mX=mouseX,mY=mouseY,!1}function windowResized(){resizeCanvas(windowWidth,windowHeight)}`;
-      executeCode=_=>{eval(codigo)},$("#code div pre").text(codigo),executeCode(),document.addEventListener("touchstart",{}),$("#code").click(function(){$("#code div").toggleClass("hide"),$("body").toggleClass("fixed")});
+      let s=23,t=1,f=1,mX,mY;function setup(){createCanvas(w=windowWidth,h=windowHeight),mX=.9*width,mY=.9*height,noStroke()}function draw(){scale(2);for(let o=-s;o<w+2*s;o+=s/2)for(let e=-s;e<w+2*s;e+=s/2){var i=1.5*cos(t/5-e*s*30+map(mX,0,width,-5,5))*s/2,m=2.5*sin(t/5-o/30+map(mY,0,height,-5,5))*s/2;(o/(s/2)+e/(s/2))%2==0?fill(255):fill(0),circle(o+m+i,e+m,s)}t+=.12}function mousePressed(){mX=mouseX,mY=mouseY}function mouseMoved(){t+=0,mX=mouseX,mY=mouseY}function touchStarted(){return mX=mouseX,mY=mouseY,!1}function touchMoved(){return mX=mouseX,mY=mouseY,!1}function windowResized(){resizeCanvas(windowWidth,windowHeight)}
+      $("#code").click(function() {
+        $("details div").toggleClass("hide");
+        $("body").toggleClass("fixed");
+      });
     </script>
   </body>
 </html>

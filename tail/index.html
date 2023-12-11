@@ -13,16 +13,21 @@
     <script type="text/javascript" src="../js/p5.min.js"></script>
   </head>
   <body class="fixed">
-    <details id="code">
-        <summary>Tongue_party (code)</summary>
+    <details>
+        <summary id="code">Tongue_party (code)</summary>
       <div class="hide">
         <pre class="prettyprint">
+          let zoff=0;function setup(){createCanvas(windowWidth,windowHeight),background(0)}function draw(){background(0),translate(.5*width,.4*height),scale(200),noStroke();for(let o=0;o<3;o+=.01112){var t=cos(o-zoff)*map(mouseX,0,width,.1,2);fill(100*o,15*o,250*o),circle(sin(t),cos(t)*map(mouseX,0,width,.5,1.15),.171/o*map(mouseX,0,width,2,8))}zoff+=.13}
         </pre>
       </div>
     </details>
     <script>
-      var codigo =`let zoff=0;function setup(){createCanvas(windowWidth,windowHeight),background(0)}function draw(){background(0),translate(.5*width,.4*height),scale(200),noStroke();for(let o=0;o<3;o+=.01112){var t=cos(o-zoff)*map(mouseX,0,width,.1,2);fill(100*o,15*o,250*o),circle(sin(t),cos(t)*map(mouseX,0,width,.5,1.15),.171/o*map(mouseX,0,width,2,8))}zoff+=.13}`;
-      executeCode=_=>{eval(codigo)},$("#code div pre").text(codigo),executeCode(),document.addEventListener("touchstart",{}),$("#code").click(function(){$("#code div").toggleClass("hide"),$("body").toggleClass("fixed")});
-    </script>
+      let zoff=0;function setup(){createCanvas(windowWidth,windowHeight),background(0)}function draw(){background(0),translate(.5*width,.4*height),scale(200),noStroke();for(let o=0;o<3;o+=.01112){var t=cos(o-zoff)*map(mouseX,0,width,.1,2);fill(100*o,15*o,250*o),circle(sin(t),cos(t)*map(mouseX,0,width,.5,1.15),.171/o*map(mouseX,0,width,2,8))}zoff+=.13}
+
+      $("#code").click(function() {
+        $("details div").toggleClass("hide");
+        $("body").toggleClass("fixed");
+      });
+  </script>
   </body>
 </html>

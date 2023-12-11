@@ -13,16 +13,20 @@
     <script type="text/javascript" src="../js/p5.min.js"></script>
   </head>
   <body class="fixed">
-    <details id="code">
-        <summary>Two_triangles (code)</summary>
+    <details>
+        <summary id="code">Two_triangles (code)</summary>
       <div class="hide">
         <pre class="prettyprint">
+          let zoff=1e6,mX,mY;function setup(){createCanvas(windowWidth,windowHeight),mX=windowWidth/2,mY=windowHeight/2;}function draw(){background(0),translate(width/2,height/2),scale(5);var o=map(mX,0,width,-1,1),t=map(mY,0,height,-100,0);for(let e=0;e<2.5;e+=4e-4){stroke(255),strokeWeight(.151);var i=1e4*e,n=noise(e)/tan(i+zoff)*t,i=cos(i)*width/20;circle(cos(i*e-t)*i,atan(n/i/o)*i,.13)}zoff+=.035;}function mousePressed(){mX=mouseX,mY=mouseY;}function mouseMoved(){mX=mouseX,mY=mouseY;}function touchStarted(){mX=mouseX,mY=mouseY;}function touchMoved(){return mX=mouseX,mY=mouseY,!1;}function windowResized(){resizeCanvas(windowWidth,windowHeight);}
         </pre>
       </div>
     </details>
     <script>
-      var codigo =`let zoff=1e6,mX,mY;function setup(){createCanvas(windowWidth,windowHeight),mX=windowWidth/2,mY=windowHeight/2}function draw(){background(0),translate(width/2,height/2),scale(5);var o=map(mX,0,width,-1,1),t=map(mY,0,height,-100,0);for(let e=0;e<2.5;e+=4e-4){stroke(255),strokeWeight(.151);var i=1e4*e,n=noise(e)/tan(i+zoff)*t,i=cos(i)*width/20;circle(cos(i*e-t)*i,atan(n/i/o)*i,.13)}zoff+=.035}function mousePressed(){mX=mouseX,mY=mouseY}function mouseMoved(){mX=mouseX,mY=mouseY}function touchStarted(){mX=mouseX,mY=mouseY}function touchMoved(){return mX=mouseX,mY=mouseY,!1}function windowResized(){resizeCanvas(windowWidth,windowHeight)}`;
-      executeCode=_=>{eval(codigo)},$("#code div pre").text(codigo),executeCode(),document.addEventListener("touchstart",{}),$("#code").click(function(){$("#code div").toggleClass("hide"),$("body").toggleClass("fixed")});
-    </script>
+       let zoff=1e6,mX,mY;function setup(){createCanvas(windowWidth,windowHeight),mX=windowWidth/2,mY=windowHeight/2;}function draw(){background(0),translate(width/2,height/2),scale(5);var o=map(mX,0,width,-1,1),t=map(mY,0,height,-100,0);for(let e=0;e<2.5;e+=4e-4){stroke(255),strokeWeight(.151);var i=1e4*e,n=noise(e)/tan(i+zoff)*t,i=cos(i)*width/20;circle(cos(i*e-t)*i,atan(n/i/o)*i,.13)}zoff+=.035;}function mousePressed(){mX=mouseX,mY=mouseY;}function mouseMoved(){mX=mouseX,mY=mouseY;}function touchStarted(){mX=mouseX,mY=mouseY;}function touchMoved(){return mX=mouseX,mY=mouseY,!1;}function windowResized(){resizeCanvas(windowWidth,windowHeight);}
+    $("#code").click(function() {
+      $("details div").toggleClass("hide");
+      $("body").toggleClass("fixed");
+    });
+  </script>
   </body>
 </html>
