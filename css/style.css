@@ -27,6 +27,7 @@ body {
   background: black;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
 }
 
 #content-frame {
@@ -37,7 +38,6 @@ body {
   height: 100%;
   border: none; 
   z-index:1;
-  overflow: hidden;
 }
 
 #dynamic-nav {
@@ -148,6 +148,10 @@ body section {
   flex-flow: row;
   justify-content: space-between;
   z-index: 1;
+}
+
+#content {
+    flex-flow: column;
 }
 
 .head {
@@ -382,7 +386,7 @@ footer svg {
     max-width: 600px;
   }
 
-  section p:first-child {
+  section:first-child p {
       max-width: 81%;
   }
 
