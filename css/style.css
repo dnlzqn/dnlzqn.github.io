@@ -209,7 +209,7 @@ canvas {
 details {
   margin: 10rem 0px;
   flex-grow: 1;
-  font-size: 0.85em;
+  font-size: 1em;
 }
 
 summary {
