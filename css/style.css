@@ -23,11 +23,11 @@ html, body {
 }
 
 body {
-  overflow: scroll;
   background: black;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  overflow: auto;
 }
 
 #content-frame {
